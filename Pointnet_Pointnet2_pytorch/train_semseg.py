@@ -149,17 +149,23 @@ def main(args):
     log_string('PARAMETER ...')
     log_string(args)
 
-    root = 'data/s3dis/stanford_indoor3d/'
+    data_root = ''
     NUM_CLASSES = 52
     NUM_POINT = args.npoint
     BATCH_SIZE = args.batch_size
 
-    print("start loading training data ...")
-    TRAIN_DATASET = KITDataset(split='train', data_root=root, num_point=NUM_POINT, test_area=args.test_area,
+    # print("start loading training data ...")
+    print("INIT")
+    TRAIN_DATASET = KITDataset(split='train', num_point=NUM_POINT, test_area=args.test_area,
                                block_size=1.0, sample_rate=1.0, transform=None)
-    print("start loading test data ...")
-    TEST_DATASET = KITDataset(split='test', data_root=root, num_point=NUM_POINT, test_area=args.test_area,
+    # print("start loading test data ...")
+    TEST_DATASET = KITDataset(split='test', num_point=NUM_POINT, test_area=args.test_area,
                               block_size=1.0, sample_rate=1.0, transform=None)
+    print("Testing, len is ", TRAIN_DATASET.__len__())
+    points, labels = TRAIN_DATASET.__getitem__(1)
+    print(points)
+    print("points ", points[0])
+    print(len(points), len(points[0]))
 
     trainDataLoader = torch.utils.data.DataLoader(TRAIN_DATASET, batch_size=BATCH_SIZE, shuffle=True, num_workers=20,
                                                   pin_memory=True, drop_last=True,
