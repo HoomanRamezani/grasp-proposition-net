@@ -163,10 +163,13 @@ class KITDataset(Dataset):
         # points = self.room_points[room_idx]   # N * 6
         # labels = self.room_labels[room_idx]   # N
         N_points = points.shape[0]
-        print(">>> N POINTS IS ", N_points)
+        print("N POINTS IS ", N_points)
 
         while (True):
+            print(points[np.random.choice(N_points)][:3])
             center = points[np.random.choice(N_points)][:3]
+            print(center)
+            print([self.block_size / 2.0, self.block_size / 2.0, 0])
             block_min = center - [self.block_size / 2.0, self.block_size / 2.0, 0]
             block_max = center + [self.block_size / 2.0, self.block_size / 2.0, 0]
             point_idxs = np.where(
