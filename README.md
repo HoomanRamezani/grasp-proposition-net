@@ -23,13 +23,13 @@ python collect_indoor3d_data.py
 
 ## Installation
 Ensure that you have all the required dependencies installed. You can install them using:
-'''
+```
 pip install -r requirements.txt
-'''
+```
 
 ## Visualization
 Visualize the processed point clouds and proposed grasp points with our built-in tools:
-'''
+```
 #build C++ code for visualization
 cd visualizer
 bash build.sh 
@@ -41,11 +41,12 @@ python show3d_balls.py
 
 ## Results
 Our deep learning grasp-proposition network demonstrates state-of-the-art performance, reaching up to 89.5% accuracy in proposing grasp points on various objects. This showcases the model's capability in understanding complex spatial arrangements and making intelligent decisions for robotic manipulation.
-'''
-# Running the code
+
+## Running the code
+```
 python train_classification.py --model pointnet2_cls_ssg --log_dir pointnet2_cls_ssg
 python test_classification.py --log_dir pointnet2_cls_ssg
-'''
+```
 
 ## Next Steps
 ### Further preprocessing
