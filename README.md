@@ -8,6 +8,7 @@ The codebase includes custom implementations of [PointNet](http://openaccess.the
 - **Comprehensive Documentation**: Detailed instructions and explanations to guide users through installation, usage, and understanding of the system.
 - **High Accuracy**: Our models demonstrate an impressive 89.5% accuracy in predicting grasp points, ensuring reliability in practical applications.
 - **Visualization Tools**: Built-in functionality to visualize point clouds and grasp points for better understanding and analysis.
+  
 ![](/visualizer/grasps.png)
 
 ## Visualization
