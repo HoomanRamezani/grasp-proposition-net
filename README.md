@@ -30,12 +30,13 @@ pip install -r requirements.txt
 ## Visualization
 Visualize the processed point clouds and proposed grasp points with our built-in tools:
 '''
-## build C++ code for visualization
+# build C++ code for visualization
 cd visualizer
 bash build.sh 
-## run one example 
+# run one example 
 python show3d_balls.py
 ```
+
 ![](/visualizer/pic.png)
 
 ## Results
