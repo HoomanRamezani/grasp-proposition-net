@@ -8,6 +8,7 @@ The codebase includes custom implementations of [PointNet](http://openaccess.the
 - **Comprehensive Documentation**: Detailed instructions and explanations to guide users through installation, usage, and understanding of the system.
 - **High Accuracy**: Our models demonstrate an impressive 89.5% accuracy in predicting grasp points, ensuring reliability in practical applications.
 - **Visualization Tools**: Built-in functionality to visualize point clouds and grasp points for better understanding and analysis.
+![](/visualizer/grasps.png)
 
 ## Visualization
 Visualize the processed point clouds and proposed grasp points with our built-in tools:
@@ -34,7 +35,6 @@ cd data_utils
 python collect_indoor3d_data.py
 ```
 2. Processed data will save in `data/s3dis/stanford_indoor3d/`.
-![](/visualizer/grasps.png)
 
 ## Results
 Our deep learning grasp-proposition network demonstrates state-of-the-art performance, reaching up to 89.5% accuracy in proposing grasp points on various objects. This showcases the model's capability in understanding complex spatial arrangements and making intelligent decisions for robotic manipulation.
