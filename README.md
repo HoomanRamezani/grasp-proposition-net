@@ -1,7 +1,7 @@
 # Description 
 This repository provides the implementation and documentation necessary to run a deep learning-based grasp-proposition network. The network is designed to propose optimal grasp points for objects located in proximity to a robotic arm, facilitating accurate and efficient manipulation of objects in diverse settings. This is especially crucial in environments where precision and reliability are paramount, such as in manufacturing, logistics, and healthcare.
 
-The codebase includes custom implementations of [PointNet] (http://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf) and [PointNet++](http://papers.nips.cc/paper/7095-pointnet-deep-hierarchical-feature-learning-on-point-sets-in-a-metric-space.pdf), two influential architectures for point cloud processing, all built using PyTorch for ease of use and flexibility. Users can leverage this repository to generate grasp points on everyday objects by inputting point cloud data captured from a LiDAR camera.
+The codebase includes custom implementations of [PointNet] (http://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf) and [PointNet++] (http://papers.nips.cc/paper/7095-pointnet-deep-hierarchical-feature-learning-on-point-sets-in-a-metric-space.pdf), two influential architectures for point cloud processing, all built using PyTorch for ease of use and flexibility. Users can leverage this repository to generate grasp points on everyday objects by inputting point cloud data captured from a LiDAR camera.
 
 
 ## Features
@@ -30,13 +30,12 @@ pip install -r requirements.txt
 ## Visualization
 Visualize the processed point clouds and proposed grasp points with our built-in tools:
 ```
-#build C++ code for visualization
+# build C++ code for visualization
 cd visualizer
 bash build.sh 
-#run one example 
+# run one example 
 python show3d_balls.py
 ```
-
 ![](/visualizer/pic.png)
 
 ## Results
@@ -50,10 +49,10 @@ python test_classification.py --log_dir pointnet2_cls_ssg
 
 ## Next Steps
 ### Further preprocessing
-- Real World Testing: Plans are underway to deploy the network on actual robotic arms to validate its performance in real-world settings.
-- Real World Testing: Plans are underway to deploy the network on actual robotic arms to validate its performance in real-world settings.
+- **Real World Testing**: Plans are underway to deploy the network on actual robotic arms to validate its performance in real-world settings.
+- **Real World Testing**: Plans are underway to deploy the network on actual robotic arms to validate its performance in real-world settings.
 Improved DataLoader: Enhancements to the DataLoader will be made to incorporate a more physics-aware understanding of objects, further improving the accuracy and reliability of grasp point predictions.Improved DataLoader: Enhancements to the DataLoader will be made to incorporate a more physics-aware understanding of objects, further improving the accuracy and reliability of grasp point predictions.
 
 ### Widening the scope
-- Broader Dataset: We aim to extend the training dataset to include over 1000 different everyday objects, ensuring that the model generalizes well across various contexts.
-- Continuous Learning: Implementing mechanisms for the model to continually learn and adapt to new objects and environments over time.
+- **Broader Dataset**: We aim to extend the training dataset to include over 1000 different everyday objects, ensuring that the model generalizes well across various contexts.
+- **Continuous Learning**: Implementing mechanisms for the model to continually learn and adapt to new objects and environments over time.
